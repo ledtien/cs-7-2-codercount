@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const initialState = {
-  count: 1,
+  count: 0,
   defaultColor: "red",
   boxColors: [],
   currentUser: "",

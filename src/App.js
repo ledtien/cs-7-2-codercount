@@ -17,7 +17,7 @@ function App() {
   };
 
   function onChangeBoxColor(e, idx) {
-    if (!idx) {
+    if (!idx && idx !== 0) {
       dispatch({ type: "CHANGE_COLOR", payload: e.target.value });
     } else {
       dispatch({ type: "CHANGE_COLOR_BOX", idx, payload: e.target.value });
@@ -80,7 +80,7 @@ function App() {
             Decrement
           </button>
         </div>
-        {Array.from(Array(state.count)).map((c, idx) => {
+        {Array.from(Array(count)).map((c, idx) => {
           const boxColor = boxColors[idx] || state.defaultColor;
           return (
             <div
